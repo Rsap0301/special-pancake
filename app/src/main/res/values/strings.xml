@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">PMApp</string>
+    <string name="pm_logo">pm_logo</string>
+    <string name="calendar" />
+    <string name="notifications" />
+    <string name="wallet" />
+    <string name="search" />
+    <string name="profile_tab" />
+    <string name="back_button_img" />
+    <string name="profile" />
+    <string name="user_profile" />
+    <string name="promoted_channels">Promoted Channels</string>
+    <string name="etabc">etabc</string>
+    <string name="promoted_horizontal">Promoted Horizontal</string>
+    <string name="add_icon">Add icon</string>
+    <string name="image1">image!</string>
+    <string name="image2" />
+    <string name="image3" />
+    <string name="image4" />
+    <string name="image5" />
+    <string name="image6" />
+    <string name="action_bar" />
+    <string name="shops">Shops</string>
+    <string name="name1">name!</string>
+    <string name="_5_pmc">5 PMC</string>
+    <string name="name2">name2</string>
+    <string name="name3">name3</string>
+    <string name="name4">name4</string>
+    <string name="explore">Explore</string>
+    <string name="hello_world">Hello world</string>
+    <string name="constraint1">constraint!</string>
+    <string name="desc1">Desc!</string>
+    <string name="desc2">desc2</string>
+    <string name="desc3">desc3</string>
+    <string name="test1">test!</string>
+</resources>
