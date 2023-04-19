@@ -33,4 +33,11 @@
     <string name="desc2">desc2</string>
     <string name="desc3">desc3</string>
     <string name="test1">test!</string>
+    <string name="avatar_circle">Avatar_circle</string>
+    <string name="promoted_channels1">Promoted Channels</string>
+    <string name="eye_icon" />
+    <string name="explore1">Explore</string>
+    <string name="image_icon" />
+    <string name="play" />
+    <string name="stream" />
 </resources>

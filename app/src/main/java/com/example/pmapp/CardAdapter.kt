@@ -23,3 +23,4 @@ class CardAdapter(
 
     override fun getItemCount(): Int = books.size
 }
+
