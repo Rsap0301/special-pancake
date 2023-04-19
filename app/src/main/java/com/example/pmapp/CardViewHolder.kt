@@ -15,7 +15,8 @@ class CardViewHolder(
         cardCellBinding.etDesc.text = book.desc
 
         cardCellBinding.cardView.setOnClickListener{
-            clickListener.onClick(book)
+
+            clickListener.onClick(adapterPosition)
         }
     }
 }

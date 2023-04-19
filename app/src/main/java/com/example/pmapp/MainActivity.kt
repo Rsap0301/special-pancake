@@ -6,6 +6,7 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.pmapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity(), BookClickListener {
@@ -23,17 +24,20 @@ class MainActivity : AppCompatActivity(), BookClickListener {
             layoutManager = GridLayoutManager(applicationContext, 2)
             adapter = CardAdapter(bookList, mainActivity)
         }
+
+        binding.recyclerView1.apply {
+            layoutManager =
+                LinearLayoutManager(applicationContext, LinearLayoutManager.HORIZONTAL, false)
+            adapter = CardAdapter(bookList, mainActivity)
+        }
     }
 
-    override fun onClick(book: Book) {
-        val intent = Intent(applicationContext, DetailActivity::class.java)
-        intent.putExtra(BOOK_ID_EXTRA, book.id)
-        startActivity(intent)
+    override fun onClick(position: Int) {
+
+        Toast.makeText(this,position.toString(),Toast.LENGTH_LONG).show()
     }
 
-
-
-    private fun populateBooks() {
+     private fun populateBooks() {
         val book1 = Book(
             R.drawable.img1,
             "Rigel 1",
