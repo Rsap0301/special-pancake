@@ -10,4 +10,6 @@
     <color name="blue">#2ACBD7</color>
     <color name="top_black">#191D26</color>
     <color name="background">#262C3A</color>
+    <color name="light_white">#FF4C494D</color>
+    <color name="card_bg">#FF394154</color>
 </resources>
