@@ -1,13 +1,12 @@
 package com.example.pmapp
 
-import android.content.Intent
 import android.os.Bundle
-import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.pmapp.databinding.ActivityMainBinding
+
 
 class MainActivity : AppCompatActivity(), BookClickListener {
 
@@ -20,24 +19,30 @@ class MainActivity : AppCompatActivity(), BookClickListener {
         populateBooks()
 
         val mainActivity = this
-        binding.recyclerView.apply {
-            layoutManager = GridLayoutManager(applicationContext, 2)
-            adapter = CardAdapter(bookList, mainActivity)
-        }
 
         binding.recyclerView1.apply {
             layoutManager =
                 LinearLayoutManager(applicationContext, LinearLayoutManager.HORIZONTAL, false)
             adapter = CardAdapter(bookList, mainActivity)
         }
+
+        binding.recyclerView2.apply {
+            layoutManager =
+                LinearLayoutManager(applicationContext, LinearLayoutManager.HORIZONTAL, false)
+            adapter = CardAdapter(bookList, mainActivity)
+        }
+        binding.recyclerView.apply {
+            layoutManager = LinearLayoutManager(applicationContext, LinearLayoutManager.VERTICAL, false)
+            adapter = Card1Adapter(bookList, mainActivity)
+        }
     }
 
-    override fun onClick(position: Int) {
+    override fun onClick(book: Book, position: Int) {
 
-        Toast.makeText(this,position.toString(),Toast.LENGTH_LONG).show()
+        Toast.makeText(this, position.toString(), Toast.LENGTH_LONG).show()
     }
 
-     private fun populateBooks() {
+    private fun populateBooks() {
         val book1 = Book(
             R.drawable.img1,
             "Rigel 1",
@@ -93,14 +98,16 @@ class MainActivity : AppCompatActivity(), BookClickListener {
             "Rigel Networks 8"
         )
         bookList.add(book8)
-
-//        val imgbench: ImageView = findViewById(R.id.imgbench)
-//        imgbench.setOnClickListener {
-//            Toast.makeText(
-//                applicationContext,
-//                "You Clicked on Rigel 1",
-//                Toast.LENGTH_SHORT
-//            ).show()
-//        }
     }
 }
+
+////        val imgbench: ImageView = findViewById(R.id.imgbench)
+////        imgbench.setOnClickListener {
+////            Toast.makeText(
+////                applicationContext,
+////                "You Clicked on Rigel 1",
+////                Toast.LENGTH_SHORT
+////            ).show()
+////        }
+//    }
+//}

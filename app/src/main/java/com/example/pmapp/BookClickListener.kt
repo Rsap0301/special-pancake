@@ -1,5 +1,5 @@
 package com.example.pmapp
 
 interface BookClickListener {
-    fun onClick(position: Int)
+    fun onClick(book: Book, position: Int)
 }
